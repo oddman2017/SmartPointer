@@ -1,0 +1,41 @@
+TARGETNAME=test
+TARGETTYPE=PROGRAM
+TARGETEXT=exe
+
+
+INCLUDES=.
+
+MSC_WARNING_LEVEL=/W3 /WX-
+
+TARGETLIBS=\
+        $(SDK_LIB_PATH)\advapi32.lib    \
+        $(SDK_LIB_PATH)\comctl32.lib    \
+        $(SDK_LIB_PATH)\kernel32.lib    \
+        $(SDK_LIB_PATH)\ole32.lib       \
+        $(SDK_LIB_PATH)\oleaut32.lib    \
+        $(SDK_LIB_PATH)\user32.lib      \
+        $(SDK_LIB_PATH)\gdi32.lib       \
+        $(SDK_LIB_PATH)\uuid.lib        \
+        $(SDK_LIB_PATH)\shlwapi.lib     \
+        $(SDK_LIB_PATH)\shell32.lib     \
+
+
+C_DEFINES= $(C_DEFINES) 
+UMTYPE=console
+
+USE_ATL=1
+ATL_VER=71
+USE_STATIC_ATL=1
+
+USE_MSVCRT=1
+USE_NATIVE_EH=1
+USE_RTTI=1
+
+
+USE_STL=1
+STL_VER=60
+USE_LIBCMT=1
+
+
+SOURCES=\
+        test4.cpp \
